@@ -1,6 +1,6 @@
 # _AutoFocus_
 
-A simple app that uses the iPhone/iPad camera to detect faces and automatically focus on them.
+A simple app that uses the iPhone or iPad camera to detect faces and automatically focus on them.
 
 #### _Implementation_
 
