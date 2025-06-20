@@ -1,13 +1,12 @@
 # _AutoFocus_
-### _Project for IZA course at at Faculty of Information Technology, Brno University of Technology_
 
-**Name and surname:** Marius Iustin Grossu
-
-**Login:** xgross10
-
-Simple app that use the iPhone/iPad camera to detect a face and when a face is detected it focus on it.
+A simple app that uses the iPhone/iPad camera to detect faces and automatically focus on them.
 
 #### _Implementation_
 
-In this app are used the **AVFoundation** and **Vision** libraries from Apple. Using AVFoundation the app gets access to the main (default) camera via the _AVCaptureSession()_ class, which coordinates several inputs like a microphone or camera in several outputs. On startup the user is asked to allow the camera to be used, the permission management for the camera is not implemented, so if the user disables access the application crashes. Subsequently, what the camera captures is displayed on the screen using the _AVCaptureVideoPreviewLayer()_ class. While receiving each frame that the camera captures, it is sent for processing using Vision, which has already implemented face detection algorithms.
+This app leverages Apple’s **AVFoundation** and **Vision** frameworks. It uses **AVFoundation** to access the default (main) camera through the `AVCaptureSession()` class, which manages multiple input sources (such as microphones or cameras) and outputs.
+
+On startup, the app requests permission to use the camera. **Note:** camera permission management is not fully implemented, so if the user denies access, the app may crash.
+
+The live camera feed is displayed on the screen using `AVCaptureVideoPreviewLayer()`. Each captured frame is processed using the **Vision** framework, which provides built-in face detection algorithms. When a face is detected, the app adjusts the camera focus accordingly.
 
